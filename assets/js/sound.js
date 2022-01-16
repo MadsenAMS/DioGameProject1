@@ -4,6 +4,7 @@ let musica = document.getElementById("musica");
 let somGameover = document.getElementById("somGameover");
 let somPerdido = document.getElementById("somPerdido");
 let somResgate = document.getElementById("somResgate");
+let somLevelup = document.getElementById("somLevelup");
 let isMuted = false;
 
 
@@ -45,6 +46,11 @@ function TocarSomAmigoMorto() {
 function TocarFimDeJogo() {
     if (!isMuted)
         somGameover.play();
+}
+
+function TocarLevelUp() {
+    if (!isMuted)
+        somLevelup.play();
 }
 
 function ToggleMute() {

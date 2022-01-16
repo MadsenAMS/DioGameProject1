@@ -3,6 +3,7 @@ let friendsSaved = 0;
 let friendsLost = 0;
 let choppersDown = 0;
 let trucksDown = 0;
+let gameLevel = 0;
 
 function ScoredTruck() {
     totalScore += 25;
@@ -38,10 +39,34 @@ function GetTotalScore() {
     return totalScore;
 }
 
+
+function GetLevel() {
+    return gameLevel;
+}
+
+function LevelUp() {
+    gameLevel++;
+    TocarLevelUp();
+    let _nextLevel = (GetLevel() ** 2) * 100;
+    $("#currentlevel").html("<h2>Level: " + GetLevel() + "<br>Next Level: " + _nextLevel + "</h2>");
+
+    $("#gameBackground").append("<div id='levelup'>Level " + GetLevel() + "</div>");
+
+    var displayLevelUpBanner = window.setInterval(LevelUpBanner, 2000)
+
+    function LevelUpBanner() {
+
+        window.clearInterval(displayLevelUpBanner);
+        displayLevelUpBanner = null;
+        $("#levelup").remove();
+    }
+}
+
 function ClearScoreboard() {
     totalScore = 0;
     friendsSaved = 0;
     friendsLost = 0;
     choppersDown = 0;
     trucksDown = 0;
+    gameLevel = 0;
 }

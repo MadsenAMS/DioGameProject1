@@ -19,5 +19,6 @@ A few modifications were added to the original project, namedly:
 - Instead of having the scoreboard update on a loop, it is updated each time the player actually scores. Scoreboard also received a separate file for code cleaning.
 - Applied a few GIMP filters to sprites to make them a bit easier on the eyes (though a bit more cartoonish). Happy with the friend, not happy with the background though.
 - Made it so that friendlies are spawned only when a truck is destroyed and go left. They become positive score when they are captured by player chopper, and negative score when they are killed by a truck or when they leave the screen to the left. Trucks will not spawn a friend if another one is already on screen.
-- Added a level panel on the right side of the screen with a "next level" score counter.
+- Added a level panel on the right side of the screen with a "next level" score counter, and a "level up" cue when speed increases (original code increases speed for every enemy defeated).
 - Added a much needed "mute/unmute" button.
+- New sound chosen for "rescued allied" and "missle firing". Both free sounds files offered by zapsplat.com. 

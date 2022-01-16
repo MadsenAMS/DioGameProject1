@@ -1,11 +1,9 @@
 let isGameOver;
 let hitPoints;
-let gameLevel;
 
 function Start() {
     isGameOver = false;
     hitPoints = 3;
-    gameLevel = 0;
     $("#start").hide();
     $("#end").remove();
 
@@ -63,16 +61,6 @@ function UpdateEnergyBar() {
             EndGame();
             break;
     }
-}
-
-function GetLevel() {
-    return gameLevel;
-}
-
-function LevelUp() {
-    gameLevel++;
-    let _nextLevel = (GetLevel() ** 2) * 100;
-    $("#currentlevel").html("<h2>Level: " + GetLevel() + "<br>Next Level: " + _nextLevel + "</h2>");
 }
 
 function EndGame() {

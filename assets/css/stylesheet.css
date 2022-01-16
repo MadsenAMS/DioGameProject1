@@ -164,3 +164,13 @@ h3 {
     padding: 15px;
     opacity: 0.8;
 }
+
+#levelup {
+    font-size: larger;
+    font-family: Titulo;
+    position: absolute;
+    left: 425px;
+    top: 300px;
+    color: white;
+    font-size: 40px;
+}
