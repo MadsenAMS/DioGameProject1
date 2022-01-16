@@ -8,36 +8,43 @@ var TECLA = {
     SPACE: 32
 }
 
-let pressionou = [];
+let pressedKey = [];
+let canFire = true;
+
+function isReadyToFire() {
+    return canFire;
+}
 
 function checkinput() {
     $(document).keydown(function(e) {
-        pressionou[e.which] = true;
+        pressedKey[e.which] = true;
     });
 
     $(document).keyup(function(e) {
-        pressionou[e.which] = false;
+        pressedKey[e.which] = false;
     });
 }
 
-function moveplayer() {
+function MovePlayer() {
 
     checkinput();
 
-    if (pressionou[TECLA.W] || pressionou[TECLA.UP]) {
+    if (pressedKey[TECLA.W] || pressedKey[TECLA.UP]) {
         var topo = parseInt($("#player").css("top"));
         if (topo <= 10) { return; }
 
         $("#player").css("top", topo - 10);
     }
 
-    if (pressionou[TECLA.S] || pressionou[TECLA.DOWN]) {
+    if (pressedKey[TECLA.S] || pressedKey[TECLA.DOWN]) {
         var topo = parseInt($("#player").css("top"));
         if (topo >= 434) { return; }
         $("#player").css("top", topo + 10);
     }
 
-    if (pressionou[TECLA.D] || pressionou[TECLA.SPACE] || pressionou[TECLA.RIGHT]) {
-
+    if (pressedKey[TECLA.D] || pressedKey[TECLA.SPACE] || pressedKey[TECLA.RIGHT]) {
+        if (canFire) {
+            fire();
+        }
     }
 }
