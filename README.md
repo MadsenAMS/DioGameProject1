@@ -2,8 +2,9 @@
 Repository for First Game Project on Dio (Part of the MRV Bootcamp Project)
 
 This game was built using images and codes offered by an instructor, using CSS, HTML, JavaScript and JQuery.
+The original code is builds heavly over a single .js file... I've fragmented it into several smaller codes for code cleaning purpose, and have made enough modifications that I feel there is enough of myself on the code to justify this repository.
 
-A few modifications were added to the original project, namedly: 
+Here are a list of most the modifications that were added to the original project, namedly: 
 
 - The start window was given transperency in CSS, and all game borders were given a radius (only style modification).
 - Many of the html classes were renamed favoring English tags.
